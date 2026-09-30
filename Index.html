@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malodes Saints Youth Academy</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation Bar -->
+  <header>
+    <div class="logo-container">
+      <h1>Malodes Saints</h1>
+      <p>Developing Talent. Building Champions.</p>
+    </div>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#players">Players</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#registration">Register</a>
+      <a href="#fees">Fees</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Welcome to Malodes Saints</h2>
+      <p>Official website of our football youth academy.</p>
+      <a href="#registration" class="btn">Join Our Academy</a>
+    </section>
+
+    <!-- Star Players Section -->
+    <section id="players" class="section">
+      <h2>Star Players</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-avatar">⚽</div>
+          <h3>John Doe</h3>
+          <p>Position: Striker</p>
+          <p>Age: 15</p>
+        </div>
+        <div class="card">
+          <div class="card-avatar">⚽</div>
+          <h3>James Smith</h3>
+          <p>Position: Midfielder</p>
+          <p>Age: 14</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section id="coaches" class="section">
+      <h2>Coaches & Staff</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-avatar">📋</div>
+          <h3>Head Coach</h3>
+          <p>UEFA B Licensed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="section">
+      <h2>Player Registration</h2>
+      <p>Fill out the form below to register a player with our academy.</p>
+      
+      <form id="regForm" class="registration-form">
+        <div class="form-group">
+          <label for="playerName">Player Full Name</label>
+          <input type="text" id="playerName" placeholder="Enter player name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required>
+        </div>
+
+        <div class="form-group">
+          <label for="position">Preferred Position</label>
+          <select id="position" required>
+            <option value="">Select Position</option>
+            <option value="Goalkeeper">Goalkeeper</option>
+            <option value="Defender">Defender</option>
+            <option value="Midfielder">Midfielder</option>
+            <option value="Forward/Striker">Forward / Striker</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="parentName">Parent/Guardian Name</label>
+          <input type="text" id="parentName" placeholder="Enter guardian name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number (M-Pesa)</label>
+          <input type="tel" id="phone" placeholder="e.g. 0712345678" required>
+        </div>
+
+        <button type="submit" class="btn">Submit Registration</button>
+      </form>
+
+      <div id="statusMessage" class="status-message"></div>
+
+      <!-- Registered Players Display -->
+      <div class="registered-list-container">
+        <h3>Registered Academy Players</h3>
+        <ul id="playerList" class="player-list">
+          <!-- Players loaded via JavaScript -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Fees & M-Pesa Section -->
+    <section id="fees" class="section">
+      <h2>Academy Fees & M-Pesa Payment</h2>
+      <p>Pay academy fees quickly and securely via M-Pesa.</p>
+
+      <form id="mpesaForm" class="registration-form">
+        <div class="form-group">
+          <label for="mpesaPhone">M-Pesa Phone Number</label>
+          <input type="tel" id="mpesaPhone" placeholder="07XXXXXXXX or 01XXXXXXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label for="feeType">Payment Reason</label>
+          <select id="feeType" required>
+            <option value="1500">Monthly Training Fee — KSh 1,500</option>
+            <option value="500">Registration / Kit Fee — KSh 500</option>
+            <option value="3000">Termly Package — KSh 3,000</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn">Pay via M-Pesa</button>
+      </form>
+
+      <div id="mpesaStatus" class="status-message"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malodes Saints Youth Academy</p>
+  </footer>
+
+  <script src="Script.js"></script>
+</body>
+</html>
